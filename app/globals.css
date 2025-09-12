@@ -1,26 +1,80 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--background: #ffffff;
+	--foreground: #171717;
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: system-ui, -apple-system, sans-serif;
+	--font-mono: ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility classes for enhanced accessibility and responsiveness */
+.focus-ring:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px rgb(59 130 246);
+	border-radius: 4px;
+}
+
+/* Enhanced contrast for better accessibility */
+.text-high-contrast {
+	color: #1a1a1a;
+}
+
+.bg-high-contrast {
+	background-color: #ffffff;
+	border: 1px solid #e5e7eb;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+		backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
+/* Improve readability with better line height */
+p,
+li {
+	line-height: 1.6;
+}
+
+/* Ensure minimum touch target size for mobile accessibility */
+button,
+a {
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.text-gray-600 {
+		color: #000000 !important;
+	}
+
+	.text-gray-400 {
+		color: #333333 !important;
+	}
+
+	.border-gray-200 {
+		border-color: #000000 !important;
+	}
 }
