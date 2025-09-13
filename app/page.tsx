@@ -1,8 +1,8 @@
 "use client";
 
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+import Navbar from './components/navbar';
+import Hero from './components/hero';
+import Footer from './components/footer';
 
 export default function Home() {
   const handleWhatsAppClick = () => {

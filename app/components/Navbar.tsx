@@ -1,118 +1,185 @@
 "use client";
 
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu, Phone } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
-export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+// Primary Navbar Component  
+const PrimaryNavbar = () => {
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/919876543210?text=${encodeURIComponent("Hello, I'm interested in your services.")}`, '_blank');
+  };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-blue-600">
-              Medicare Plus
+    <div className="hidden md:block w-full bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
+        <div className="flex justify-between items-center">
+          <Link href="/">
+            <Image src="/artemis-logo.png" alt="Logo" width={160} height={42} priority />
+          </Link>
+
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 text-[#7b6824]">
+              <Phone className="h-5 w-5" />
+              <span className="font-medium">+91 80760 36335</span>
             </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              href="/"
+            <button 
+              onClick={handleWhatsApp} 
+              className="flex items-center gap-2 bg-[#7b6824] text-white px-4 py-2 rounded-lg hover:bg-stone-700 transition-colors font-medium"
             >
-              Home
-            </a>
-            
-            <div className="relative">
-              <button 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-              >
-                Services
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md border border-gray-200 py-2 mt-1">
-                  <a 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    href="/services/medicare-advantage"
-                  >
-                    Medicare Advantage
-                  </a>
-                  <a 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    href="/services/supplement"
-                  >
-                    Medicare Supplement
-                  </a>
-                  <a 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    href="/services/prescription"
-                  >
-                    Prescription Plans
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <a 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              href="/about"
-            >
-              About
-            </a>
-
-            <a 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              href="/contact"
-            >
-              Contact
-            </a>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
-              Get Quote
+              <FaWhatsapp className="h-5 w-5" />
+              WhatsApp Us
             </button>
           </div>
-
-          {/* Mobile menu button */}
-          <button 
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
-
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              <a className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium" href="/">
-                Home
-              </a>
-              <a className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium" href="/services">
-                Services
-              </a>
-              <a className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium" href="/about">
-                About
-              </a>
-              <a className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium" href="/contact">
-                Contact
-              </a>
-              <button className="w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
-                Get Quote
-              </button>
-            </div>
-          </div>
-        )}
       </div>
+    </div>
+  );
+};
+
+// Secondary Navbar Component - FIXED
+const SecondaryNavbar = () => {
+  return (
+    <div className="hidden md:block w-full bg-[#92834d] text-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-3">
+        <div className="flex justify-between items-center">
+          {/* Left side menu items */}
+          <div className="flex items-center space-x-8">
+            <Link href="/specialities" className="font-medium hover:text-gray-200 transition-colors">
+              Specialities
+            </Link>
+            <Link href="/doctors" className="font-medium hover:text-gray-200 transition-colors">
+              Doctors
+            </Link>
+            <Link href="/locations" className="font-medium hover:text-gray-200 transition-colors">
+              Locations
+            </Link>
+          </div>
+
+          {/* Right side menu items */}
+          <div className="flex items-center space-x-8">
+            <Link href="/visa" className="font-medium hover:text-gray-200 transition-colors">
+              Visa
+            </Link>
+            <Link href="/testimonials" className="font-medium hover:text-gray-200 transition-colors">
+              Testimonials
+            </Link>
+            <Link href="/appointments" className="font-medium hover:text-gray-200 transition-colors">
+              Appointments
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Mobile Navbar Component
+const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/919876543210?text=${encodeURIComponent("Hello, I'm interested in your services.")}`, '_blank');
+    setIsOpen(false);
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="md:hidden w-full bg-white">
+      <div className="flex justify-between items-center px-4 py-3">
+        <Link href="/">
+          <Image src="/artemis-logo.png" alt="Logo" width={120} height={32} priority />
+        </Link>
+
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
+            <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <Menu className="h-6 w-6 text-[#7b6824]" />
+            </button>
+          </SheetTrigger>
+          <SheetContent className="w-80">
+            <div className="flex flex-col space-y-6 pt-8">
+              {/* Main navigation links */}
+              <div className="space-y-1">
+                <Link 
+                  href="/specialities" 
+                  onClick={handleLinkClick}
+                  className="block text-lg font-medium text-[#7b6824] hover:text-stone-800 hover:bg-gray-50 py-3 px-2 rounded-lg transition-colors"
+                >
+                  Specialities
+                </Link>
+                <Link 
+                  href="/doctors" 
+                  onClick={handleLinkClick}
+                  className="block text-lg font-medium text-[#7b6824] hover:text-stone-800 hover:bg-gray-50 py-3 px-2 rounded-lg transition-colors"
+                >
+                  Doctors
+                </Link>
+                <Link 
+                  href="/locations" 
+                  onClick={handleLinkClick}
+                  className="block text-lg font-medium text-[#7b6824] hover:text-stone-800 hover:bg-gray-50 py-3 px-2 rounded-lg transition-colors"
+                >
+                  Locations
+                </Link>
+                <Link 
+                  href="/visa" 
+                  onClick={handleLinkClick}
+                  className="block text-lg font-medium text-[#7b6824] hover:text-stone-800 hover:bg-gray-50 py-3 px-2 rounded-lg transition-colors"
+                >
+                  Visa
+                </Link>
+                <Link 
+                  href="/testimonials" 
+                  onClick={handleLinkClick}
+                  className="block text-lg font-medium text-[#7b6824] hover:text-stone-800 hover:bg-gray-50 py-3 px-2 rounded-lg transition-colors"
+                >
+                  Testimonials
+                </Link>
+                <Link 
+                  href="/appointments" 
+                  onClick={handleLinkClick}
+                  className="block text-lg font-medium text-[#7b6824] hover:text-stone-800 hover:bg-gray-50 py-3 px-2 rounded-lg transition-colors"
+                >
+                  Appointments
+                </Link>
+              </div>
+
+              {/* Contact section */}
+              <div className="pt-6 space-y-4 border-t border-gray-200">
+                <div className="flex items-center gap-3 p-3 bg-gray-50 text-[#7b6824] rounded-lg">
+                  <Phone className="h-5 w-5" />
+                  <span className="font-medium">+91 80760 36335</span>
+                </div>
+                <button 
+                  onClick={handleWhatsApp} 
+                  className="w-full flex items-center justify-center gap-2 bg-[#7b6824] text-white px-4 py-3 rounded-lg hover:bg-stone-700 transition-colors font-medium"
+                >
+                  <FaWhatsapp className="h-5 w-5" />
+                  WhatsApp Us
+                </button>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </div>
+  );
+};
+
+// Main Navbar Export
+export default function Navbar() {
+  return (
+    <nav className="w-full shadow-sm sticky top-0 z-50">
+      <PrimaryNavbar />
+      <SecondaryNavbar />
+      <MobileNavbar />
     </nav>
   );
 }
