@@ -15,7 +15,7 @@ const PrimaryNavbar = () => {
 
   return (
     <div className="hidden md:block w-full bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
+      <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image src="/artemis-logo.png" alt="Logo" width={160} height={42} priority />
@@ -44,7 +44,7 @@ const PrimaryNavbar = () => {
 const SecondaryNavbar = () => {
   return (
     <div className="hidden md:block w-full bg-[#92834d] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-3">
+      <div className="max-w-7xl mx-auto px-6 py-1">
         <div className="flex justify-between items-center">
           {/* Left side menu items */}
           <div className="flex items-center space-x-8">

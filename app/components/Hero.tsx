@@ -60,13 +60,14 @@ const Hero: React.FC<HeroProps> = ({ handleWhatsAppClick, handlePhoneClick }) =>
   return (
     <>
       <section className="relative lg:min-h-[700px] z-10 overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - Full Width */}
         <div className="absolute inset-0 z-0">
           <Image
             src={heroContent.backgroundImage}
             alt="Artemis Hospital"
             fill
             className="object-cover object-center"
+            sizes="100vw"
             priority
           />
         </div>
@@ -74,8 +75,8 @@ const Hero: React.FC<HeroProps> = ({ handleWhatsAppClick, handlePhoneClick }) =>
         {/* Dark Overlay */}
         <div className="absolute inset-0 z-5 bg-black/40"></div>
 
-        {/* Content Overlay */}
-        <div className="relative z-10 container mx-auto px-4 h-full">
+        {/* Content Overlay - Container constraints moved here */}
+        <div className="relative z-10 container mx-auto px-4 h-full max-w-7xl">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-16 items-start lg:items-center w-full lg:min-h-[600px]">
             
             {/* Hero Content - Left Side */}
