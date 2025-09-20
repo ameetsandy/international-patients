@@ -2,6 +2,11 @@
 
 import Navbar from './components/navbar';
 import Hero from './components/hero';
+import Stats from './components/stats';
+import Journey from './components/journey';
+import TopSpecialists from './components/top-specialists';
+import OurHospital from './components/our-hospital';
+import Testimonials from './components/testimonials';
 import Footer from './components/footer';
 
 export default function Home() {
@@ -27,6 +32,11 @@ export default function Home() {
           handleWhatsAppClick={handleWhatsAppClick}
           handlePhoneClick={handlePhoneClick}
         />
+        <Stats />
+        <Journey />
+        <TopSpecialists />
+        <OurHospital />
+        <Testimonials />
         {/* Additional sections can be added here */}
       </main>
       <Footer />

@@ -31,7 +31,7 @@ const ContactForm = () => {
                         type="text"
                         placeholder="Name*"
                         required
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 text-sm transition-all duration-200"
+                        className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 text-sm transition-all duration-200"
                     />
 
                     {/* Email Field */}
@@ -40,7 +40,7 @@ const ContactForm = () => {
                         type="email"
                         placeholder="Email*"
                         required
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 text-sm transition-all duration-200"
+                        className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 text-sm transition-all duration-200"
                     />
 
                     {/* Phone Input with Country Code */}
@@ -48,7 +48,7 @@ const ContactForm = () => {
                         <select
                             name="countryCode"
                             defaultValue="+91"
-                            className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 bg-white text-sm max-w-[130px] transition-all duration-200"
+                            className="p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 bg-white text-sm max-w-[130px] transition-all duration-200"
                             title="Select your country code"
                         >
                             {countryCodes.map((code) => (
@@ -62,7 +62,7 @@ const ContactForm = () => {
                             type="tel"
                             placeholder="Mobile Number*"
                             required
-                            className="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 text-sm transition-all duration-200"
+                            className="flex-1 p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent text-gray-700 text-sm transition-all duration-200"
                         />
                     </div>
 
@@ -72,7 +72,7 @@ const ContactForm = () => {
                         placeholder="Briefly describe your medical emergency..."
                         rows={4}
                         required
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent resize-none text-gray-700 text-sm transition-all duration-200"
+                        className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-500 focus:border-transparent resize-none text-gray-700 text-sm transition-all duration-200"
                     />
 
                     {/* Submit Button */}
