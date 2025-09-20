@@ -12,8 +12,9 @@ const OurHospital: React.FC = () => {
             Our Hospital
           </h2>
           <p className="text-lg lg:text-xl text-[#7b6824]/80 max-w-3xl mx-auto leading-relaxed">
-            Artemis Hospital is proud to welcome international patients to its expanding presence,
-            offering globally benchmarked medical care across modern, accessible locations.
+            Artemis Hospital is proud to welcome international patients to its
+            expanding presence, offering globally benchmarked medical care
+            across modern, accessible locations.
           </p>
         </header>
 
@@ -88,32 +89,47 @@ const OurHospital: React.FC = () => {
                   {/* Description */}
                   <div className="prose prose-gray max-w-none">
                     <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
-                      Artemis Hospital in Gurgaon, established in 2007, is a leading healthcare institution with cutting-edge
-                      technology, world-class infrastructure, and top-notch patient care.
+                      Artemis Hospital in Gurgaon, established in 2007, is a
+                      leading healthcare institution with cutting-edge
+                      technology, world-class infrastructure, and top-notch
+                      patient care.
                     </p>
 
                     {/* Key Stats */}
                     <div className="grid grid-cols-2 gap-4 my-6">
                       <div className="text-center p-3 bg-[#7b6824]/5 rounded-lg">
-                        <div className="text-2xl font-bold text-[#7b6824]">400+</div>
-                        <div className="text-sm text-gray-600">Medical Professionals</div>
+                        <div className="text-2xl font-bold text-[#7b6824]">
+                          400+
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          Medical Professionals
+                        </div>
                       </div>
                       <div className="text-center p-3 bg-[#7b6824]/5 rounded-lg">
-                        <div className="text-2xl font-bold text-[#7b6824]">12+</div>
-                        <div className="text-sm text-gray-600">Centers of Excellence</div>
+                        <div className="text-2xl font-bold text-[#7b6824]">
+                          12+
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          Centers of Excellence
+                        </div>
                       </div>
                       <div className="text-center p-3 bg-[#7b6824]/5 rounded-lg">
-                        <div className="text-2xl font-bold text-[#7b6824]">40+</div>
+                        <div className="text-2xl font-bold text-[#7b6824]">
+                          40+
+                        </div>
                         <div className="text-sm text-gray-600">Specialties</div>
                       </div>
                       <div className="text-center p-3 bg-[#7b6824]/5 rounded-lg">
-                        <div className="text-2xl font-bold text-[#7b6824]">65+</div>
+                        <div className="text-2xl font-bold text-[#7b6824]">
+                          65+
+                        </div>
                         <div className="text-sm text-gray-600">ICU Beds</div>
                       </div>
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
-                      Advanced imaging technology including 3 Tesla MRI and 64-Slice Cardiac CT.
+                      Advanced imaging technology including 3 Tesla MRI and
+                      64-Slice Cardiac CT.
                     </p>
                   </div>
 

@@ -9,28 +9,28 @@ interface JourneyItem {
 const journeyItems: JourneyItem[] = [
   {
     icon: '/journey-icons/visa.png',
-    label: 'Instant Visa Letter'
+    label: 'Instant Visa Letter',
   },
   {
     icon: '/journey-icons/flight.png',
-    label: 'Flight Bookings'
+    label: 'Flight Bookings',
   },
   {
     icon: '/journey-icons/taxi.png',
-    label: 'Free Airport Pickup'
+    label: 'Free Airport Pickup',
   },
   {
     icon: '/journey-icons/sim.png',
-    label: 'Free Local SIM'
+    label: 'Free Local SIM',
   },
   {
     icon: '/journey-icons/accommodation.png',
-    label: 'Accommodation'
+    label: 'Accommodation',
   },
   {
     icon: '/journey-icons/manager.png',
-    label: '24/7 Dedicated Manager'
-  }
+    label: '24/7 Dedicated Manager',
+  },
 ];
 
 const Journey: React.FC = () => {
@@ -40,7 +40,8 @@ const Journey: React.FC = () => {
         {/* Header Text */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-2xl lg:text-3xl font-semibold text-[#7b6824] mb-4">
-            At Artemis, we make your journey to health simple, safe, and stress-free.
+            At Artemis, we make your journey to health simple, safe, and
+            stress-free.
           </h2>
         </div>
 

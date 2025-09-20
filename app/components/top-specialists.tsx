@@ -21,36 +21,36 @@ const TopSpecialists: React.FC = () => {
   const specialties: SpecialtyItem[] = [
     {
       icon: '/specialist-icons/oncology.png',
-      name: 'Oncology'
+      name: 'Oncology',
     },
     {
       icon: '/specialist-icons/neurology.png',
-      name: 'Neurology & Neurosurgery'
+      name: 'Neurology & Neurosurgery',
     },
     {
       icon: '/specialist-icons/orthopedic.png',
-      name: 'Orthopedics'
+      name: 'Orthopedics',
     },
     {
       icon: '/specialist-icons/cardiology.png',
-      name: 'Cardiology'
+      name: 'Cardiology',
     },
     {
       icon: '/specialist-icons/kidney.png',
-      name: 'Kidney Transplant'
+      name: 'Kidney Transplant',
     },
     {
       icon: '/specialist-icons/urology.png',
-      name: 'Urology'
+      name: 'Urology',
     },
     {
       icon: '/specialist-icons/bone.png',
-      name: 'Bone Marrow Transplant'
+      name: 'Bone Marrow Transplant',
     },
     {
       icon: '/specialist-icons/liver.png',
-      name: 'Liver Transplant'
-    }
+      name: 'Liver Transplant',
+    },
   ];
 
   const doctors: DoctorItem[] = [
@@ -60,7 +60,7 @@ const TopSpecialists: React.FC = () => {
       designation: 'Senior Consultant',
       hospital: 'Artemis Hospital, Gurgaon, India',
       experience: '29+ Years of Experience',
-      image: '/doctor-images/dr-akhil-govil.jpg'
+      image: '/doctor-images/dr-akhil-govil.jpg',
     },
     {
       name: 'Dr Sushant Srivastava',
@@ -68,7 +68,7 @@ const TopSpecialists: React.FC = () => {
       designation: 'Director',
       hospital: 'Artemis Hospital, Gurgaon, India',
       experience: '28+ Years of Experience',
-      image: '/doctor-images/dr-sushant-srivastava.jpg'
+      image: '/doctor-images/dr-sushant-srivastava.jpg',
     },
     {
       name: 'Dr Lakshmi Kant Tripathi',
@@ -76,7 +76,7 @@ const TopSpecialists: React.FC = () => {
       designation: 'Senior Consultant',
       hospital: 'Artemis Hospital, Gurgaon, India',
       experience: '31+ Years of Experience',
-      image: '/doctor-images/dr-lakshmi-kant-tripathi.jpg'
+      image: '/doctor-images/dr-lakshmi-kant-tripathi.jpg',
     },
     {
       name: 'Dr Rahul Mehrotra',
@@ -84,8 +84,8 @@ const TopSpecialists: React.FC = () => {
       designation: 'Chair',
       hospital: 'Artemis Hospital, Gurgaon, India',
       experience: '24+ Years of Experience',
-      image: '/doctor-images/dr-rahul-mehrotra.jpg'
-    }
+      image: '/doctor-images/dr-rahul-mehrotra.jpg',
+    },
   ];
 
   return (
@@ -97,8 +97,10 @@ const TopSpecialists: React.FC = () => {
             Our Top Specialties
           </h2>
           <p className="text-base lg:text-lg text-white/90 max-w-5xl mx-auto leading-relaxed">
-            Artemis Hospitals, Gurgaon's first JCI and NABH accredited hospital, brings together 40+ specialties and 12 Centers of
-            Excellence under one roof, offering international patients world-class care powered by innovation and compassion.
+            Artemis Hospitals, Gurgaon's first JCI and NABH accredited hospital,
+            brings together 40+ specialties and 12 Centers of Excellence under
+            one roof, offering international patients world-class care powered
+            by innovation and compassion.
           </p>
         </div>
 
@@ -199,4 +201,4 @@ const TopSpecialists: React.FC = () => {
   );
 };
 
-export default TopSpecialists
+export default TopSpecialists;

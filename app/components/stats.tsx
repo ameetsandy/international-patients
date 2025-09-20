@@ -11,27 +11,26 @@ const stats: StatItem[] = [
   {
     icon: '/stats-icons/globe.png',
     number: '70+',
-    label: 'Countries'
+    label: 'Countries',
   },
   {
     icon: '/stats-icons/doctor.png',
     number: '400+',
-    label: 'Doctors'
+    label: 'Doctors',
   },
   {
     icon: '/stats-icons/bed.png',
     number: '750',
-    label: 'Beds'
+    label: 'Beds',
   },
   {
     icon: '/stats-icons/hospital.png',
     number: '04',
-    label: 'Hospitals'
-  }
+    label: 'Hospitals',
+  },
 ];
 
 const Stats: React.FC = () => {
-
   return (
     <section className="py-16 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-3 sm:px-4 max-w-7xl">

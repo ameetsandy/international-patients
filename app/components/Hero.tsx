@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Button } from "@/components/ui/button";
-import { FaWhatsapp, FaTelegram } from "react-icons/fa";
+import { Button } from '@/components/ui/button';
+import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import ContactForm from './contact-form';
 
 interface HeroProps {
@@ -10,10 +10,10 @@ interface HeroProps {
 }
 
 // Sticky CTA Buttons Component for Mobile
-const StickyMobileCTA: React.FC<{ handleWhatsAppClick: () => void; handlePhoneClick: () => void }> = ({
-  handleWhatsAppClick,
-  handlePhoneClick
-}) => {
+const StickyMobileCTA: React.FC<{
+  handleWhatsAppClick: () => void;
+  handlePhoneClick: () => void;
+}> = ({ handleWhatsAppClick, handlePhoneClick }) => {
   const [showSticky, setShowSticky] = useState(false);
 
   useEffect(() => {
@@ -50,11 +50,14 @@ const StickyMobileCTA: React.FC<{ handleWhatsAppClick: () => void; handlePhoneCl
   );
 };
 
-const Hero: React.FC<HeroProps> = ({ handleWhatsAppClick, handlePhoneClick }) => {
+const Hero: React.FC<HeroProps> = ({
+  handleWhatsAppClick,
+  handlePhoneClick,
+}) => {
   const heroContent = {
-    title: "Welcome to Artemis Hospital",
-    subtitle: "International Patient Services",
-    backgroundImage: "/artemis-hero.png"
+    title: 'Welcome to Artemis Hospital',
+    subtitle: 'International Patient Services',
+    backgroundImage: '/artemis-hero.png',
   };
 
   return (
@@ -78,7 +81,6 @@ const Hero: React.FC<HeroProps> = ({ handleWhatsAppClick, handlePhoneClick }) =>
         {/* Content Overlay - Container constraints moved here */}
         <div className="relative z-10 container mx-auto px-4 h-full max-w-7xl">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-16 items-start lg:items-center w-full lg:min-h-[600px]">
-
             {/* Hero Content - Left Side */}
             <div className="flex flex-col justify-center lg:justify-center h-full text-left pt-8 lg:pt-0 space-y-6 lg:space-y-8">
               {/* Text Content */}
